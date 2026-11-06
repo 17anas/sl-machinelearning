@@ -35,7 +35,6 @@ with st.sidebar:
   
 
 
-"body_mass_g","sex"
 
 
 
