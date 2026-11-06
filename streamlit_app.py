@@ -11,9 +11,10 @@ with st.expander('Data'):
   df = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv")
   df
 
-st.write('**y**')
-X = df.drop['species']
+st.write('**X**')
+X = df.drop('species', axis=1)
 X
 
+st.write('**y**')
 y = df.species
 y
