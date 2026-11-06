@@ -19,10 +19,9 @@ with st.expander('X/Y'):
   y = df.species
   y
 
-with st.sidebar:
-  st.write("Input Features")
-
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm',y='body_mass_g',color = 'species')
   
-  
+
+with st.sidebar:
+  st.header("Input Features")
