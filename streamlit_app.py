@@ -52,8 +52,6 @@ with st.expander("Input Features"):
 
 
 
-input_penguins
-
 
   
   
