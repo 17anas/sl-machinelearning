@@ -57,7 +57,7 @@ with st.sidebar:
 
 
   def target_encode(val):
-    return target_mapper[val]
+    return target_mapper(val)
 
   y = y_row.apply(target_encode)
   y
