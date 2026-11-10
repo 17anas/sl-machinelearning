@@ -7,7 +7,7 @@ st.title('Machine Learning App')
 st.info("this app builds a machine learning model !")
 
 with st.expander('Data'):
-  st.write('**Raw Data**')
+  st.write('**Row Data**')
   df = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv")
   df
 with st.expander('X/y'):
@@ -53,6 +53,7 @@ with st.sidebar:
   target_mapper = {'Adelie : 0',
                   'Chinstrap : 1',
                   'Gentoo : 2'}
+  
   def target_encode(val):
     return target_mapper(val)
     
