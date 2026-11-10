@@ -12,12 +12,12 @@ with st.expander('Data'):
   df
 with st.expander('X/y'):
   st.write('**X**')
-  X = df.drop('species', axis=1)
-  X
+  X_row = df.drop('species', axis=1)
+  X_row
 
   st.write('**y**')
-  y = df.species
-  y
+  y_row = df.species
+  y_row
 
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm',y='body_mass_g',color = 'species')
