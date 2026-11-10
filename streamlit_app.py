@@ -44,7 +44,9 @@ with st.sidebar:
   input_df = pd.DataFrame(df, index = [0])
   input_penguins = pd.concat([input_df,X],axis = 0)
 
-
+  encode = ['island','gender','sex']
+  df_penguins = pd.get_dummies(input_penguins, prefix = encode)
+  df_penguins[:1]
   
 
 with st.expander("Input Features"):
@@ -54,9 +56,7 @@ with st.expander("Input Features"):
   input_penguins
 
 
-encode = ['island','gender','sex']
-df_penguins = pd.get_dummies(input_penguins, prefix = encode)
-df_penguins[:1]
+
 
 
 
