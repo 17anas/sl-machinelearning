@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from typing import Any, Dict, Union
+
 
 
 st.title('Machine Learning App')
@@ -13,12 +13,12 @@ with st.expander('Data'):
   df
 with st.expander('X/y'):
   st.write('**X**')
-  X_row = df.drop('species', axis=1)
-  X_row
+  X_raw = df.drop('species', axis=1)
+  X_raw
 
   st.write('**y**')
-  y_row = df.species
-  y_row
+  y_raw = df.species
+  y_raw
 
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm',y='body_mass_g',color = 'species')
@@ -44,7 +44,7 @@ with st.sidebar:
           'gender': gender
            }
   input_df = pd.DataFrame(df, index = [0])
-  input_penguins = pd.concat([input_df,X_row],axis = 0)
+  input_penguins = pd.concat([input_df,X_raw],axis = 0)
 
 #encode X
 encode = ['island','gender','sex']
