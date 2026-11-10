@@ -56,7 +56,8 @@ target_mapper = {'Adelie' : 0,
                  'Gentoo' : 2}
 
 
-target_encode = target_mapper(val)
+def target_encode(val) :
+  return target_mapper(val)
 
 y = y_row.apply(target_encode)
 y
