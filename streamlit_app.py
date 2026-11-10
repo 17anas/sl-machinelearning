@@ -54,7 +54,7 @@ with st.expander("Input Features"):
   input_df
   st.write('**Combined penguins data**')
   input_penguins
-  st.write("Input Encoded")
+  st.write("**Input Encoded**")
   input_row
 
 
