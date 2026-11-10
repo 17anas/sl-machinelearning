@@ -22,11 +22,7 @@ with st.expander('X/y'):
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm',y='body_mass_g',color = 'species')
 
-  def target_encode(val):
-    return target_mapper(val)
-
-  y = y_row.apply(target_encode)
-  y
+ 
 
 with st.sidebar:
   st.header("Input Features")
@@ -58,6 +54,13 @@ with st.sidebar:
   target_mapper = {'Adelie : 0',
                   'Chinstrap : 1',
                   'Gentoo : 2'}
+
+
+  def target_encode(val):
+    return target_mapper[val]
+
+  y = y_row.apply(target_encode)
+  y
   
  
  
