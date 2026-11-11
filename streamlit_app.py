@@ -82,11 +82,11 @@ with st.expander("Data preparation"):
 clf = RandomForestClassifier()
 clf.fit(X,y)
 
-# apply model
+# apply model to make predictions
 prediction = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
 
-predict_proba
+prediction_proba
 
 
 
