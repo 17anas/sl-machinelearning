@@ -1,10 +1,11 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 
 
-st.title('Machine Learning App')
+st.title('Machine Learning App') 
 
 st.info("this app builds a machine learning model !")
 
@@ -91,8 +92,11 @@ df_prediction_proba.columns = ["Adelie","Chinstrap","Gentoo"]
 df_prediction_proba
 
 
+# Display predicted species
 
-
+st.subheader("**Predicted Species**")
+penguins_species = np.array(["Adelie","Chinstrap","Gentoo"])
+st.success(str(penguins_species[prediction][0]))
 
 
 
